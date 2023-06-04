@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background: #111111;
+    color: #ffff;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+.cardContainer{
+    width: 95%;
+    display: flex;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.card{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: .5rem;
+    border-radius: 5px;
+    gap: 1rem;
+    border: 1px solid gray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.detailDiv{
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.detailDiv img{
+    width: 40%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* CSS FOR LOADER  */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.spinner {
+    width: 88px;
+    height: 88px;
+    display: grid;
+    border-radius: 50%;
+    -webkit-mask: radial-gradient(farthest-side,#0000 40%,#474bff 41%);
+    background: linear-gradient(0deg ,rgba(71,75,255,0.5) 50%,rgba(71,75,255,1) 0) center/7px 100%,
+         linear-gradient(90deg,rgba(71,75,255,0.25) 50%,rgba(71,75,255,0.75) 0) center/100% 7px;
+    background-repeat: no-repeat;
+    animation: spinner-d3o0rx 1.4s infinite steps(12);
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.915;
+    transform: rotate(30deg);
+ }
+ 
+ .spinner::after {
+    opacity: 0.83;
+    transform: rotate(60deg);
+ }
+ 
+ @keyframes spinner-d3o0rx {
+    100% {
+       transform: rotate(1turn);
+    }
+ }

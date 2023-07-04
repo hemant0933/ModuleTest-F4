@@ -5,6 +5,10 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+::selection{
+    color: black;
+    background-color: #ffff;
+}
 ::-webkit-scrollbar {
     width: 1.2em;
 }

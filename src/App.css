@@ -3,17 +3,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+    width: 1.5em;
+}
+::-webkit-scrollbar-track{
+    background: #FFFFFF;
+    border-radius: 100vw;
+    margin-block: .5em;
+    margin-inline: 1em;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    border: .25em solid  #FFFFFF;
+    background: #23074d;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(120 100% 10% / 1);
+}
+
 body{
     width: 100%;
     background: #111111;
     color: #ffff;
     font-family: 'Inter', sans-serif;
     padding: 1rem;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-
 }
 .cardContainer{
     width: 95%;
@@ -35,10 +50,12 @@ body{
     gap: 1rem;
     border: 1px solid gray;
 }
-
+a{
+    text-decoration: none;
+}
 img{
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     overflow: hidden;
     border-radius: 5px;
 }

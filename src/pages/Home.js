@@ -13,7 +13,17 @@ const Home = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  if (loading) return <div class="spinner"></div>;
+  if (loading) return (
+  <div class="loader">
+    <div class="loader-square one"></div>
+    <div class="loader-square two"></div>
+    <div class="loader-square three"></div>
+    <div class="loader-square four"></div>
+    <div class="loader-square five"></div>
+    <div class="loader-square six"></div>
+    <div class="loader-square seven"></div>
+  </div>)
+  
   return (
     <div>
       <p style={{fontSize:'30px',paddingBottom:'1rem',borderBottom:'1px solid white'}}>Social Media App</p>
